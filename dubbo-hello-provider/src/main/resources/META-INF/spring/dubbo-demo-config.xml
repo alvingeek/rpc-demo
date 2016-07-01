@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="demo-provider" owner="programmer" organization="dubbox"/>
+
+    <dubbo:registry address="zookeeper://45.32.82.194:2181"/>
+
+    <dubbo:protocol name="dubbo" serialization="kryo" port="20880"/>
+
+    <!-- use tomcat server -->
+    <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat"
+                    accepts="500"
+                    extension="com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>
+
+    <import resource="dubbo-demo-provider.xml"/>
+
+</beans>
