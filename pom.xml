@@ -9,15 +9,32 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>dubbo-hello-api</module>
-        <module>dubbo-hello-provider</module>
-        <module>dubbo-hello-provider-1</module>
-        <module>dubbo-hello-consumer</module>
-        <module>dubbo-hello-admin</module>
-        <module>rmi-demo</module>
-        <module>rmi-demo-provider</module>
-        <module>rmi-demo-consumer</module>
-        <module>rmi-demo-api</module>
-    </modules>
+    <profiles>
+        <profile>
+            <id>all</id>
+            <modules>
+                <module>dubbo-hello-api</module>
+                <module>dubbo-hello-provider</module>
+                <module>dubbo-hello-provider-1</module>
+                <module>dubbo-hello-consumer</module>
+                <module>dubbo-hello-admin</module>
+                <module>rmi-demo</module>
+                <module>rmi-demo-provider</module>
+                <module>rmi-demo-consumer</module>
+                <module>rmi-demo-api</module>
+            </modules>
+        </profile>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <id>demo</id>
+            <modules>
+                <module>rmi-demo-provider</module>
+                <module>rmi-demo-consumer</module>
+                <module>rmi-demo-api</module>
+            </modules>
+        </profile>
+    </profiles>
+
 </project>

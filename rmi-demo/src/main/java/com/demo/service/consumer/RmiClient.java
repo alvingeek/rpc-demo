@@ -12,7 +12,8 @@ import java.rmi.Remote;
  */
 public class RmiClient {
     public static void main(String[] args) throws Exception {
-        String ip = "192.168.195.128";
+        //String ip = "192.168.0.100";
+        String ip = "45.32.82.194";
         //String ip = "localhost";
         String url = "rmi://" + ip + ":1099/com.demo.service.HelloServiceImpl";
         String urlLoginService = "rmi://" + ip + ":1099/com.demo.service.provider.LoginServiceImpl";

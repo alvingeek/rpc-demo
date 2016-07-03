@@ -37,7 +37,7 @@ public class ConfigServiceImpl extends AbstractService implements ConfigService{
     }
 
     /* (non-Javadoc)
-     * @see com.alibaba.dubbo.governance.service.ConfigService#findAllConfigsMap()
+     * @see com.alibaba.dubbo.governance.service.ConfigService#findAllConfigsMaRp()
      */
     public Map<String, String> findAllConfigsMap() {
         // TODO Auto-generated method stub

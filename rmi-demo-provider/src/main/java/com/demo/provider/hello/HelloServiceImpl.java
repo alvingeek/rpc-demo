@@ -1,4 +1,6 @@
-package com.demo.service.provider;
+package com.demo.provider.hello;
+
+import com.demo.service.HelloService;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
