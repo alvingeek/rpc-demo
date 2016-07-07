@@ -33,6 +33,10 @@
                 <module>rmi-demo-provider</module>
                 <module>rmi-demo-consumer</module>
                 <module>rmi-demo-api</module>
+                <module>hessian-demo</module>
+                <module>hessian-demo-api</module>
+                <module>hessian-demo-provider</module>
+                <module>hessian-demo-consumer</module>
             </modules>
         </profile>
     </profiles>
